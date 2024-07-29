@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git branch: 'master', url: 'git@github.com:deManrrique/Infrastructure.git'
+                git branch: 'master', url: 'https://github.com/deManrrique/Infrastructure.git', credentialsId: 'github-credentials-id'
             }
         }
         stage('Initialize Terraform') {
